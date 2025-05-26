@@ -1,0 +1,154 @@
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #33ff00;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h3 {
+    color: #33ff00;
+    margin: 15px 0;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    min-height: 500px;
+}
+
+/* Editor de código */
+.editor {
+    flex: 2;
+}
+
+.editor textarea {
+    width: 100%;
+    height: 500px;
+    background-color: #252526;
+    color: #e0e0e0;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    padding: 15px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.editor textarea:focus {
+    outline: none;
+    border-color: #61dafb;
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.3);
+}
+
+/* Área de saída */
+.saida {
+    flex: 1;
+    background-color: #252526;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    padding: 15px;
+    min-height: 500px;
+}
+
+/* Botões e inputs */
+button, input[type="text"] {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #404040;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #61dafb;
+    color: #1e1e1e;
+    border-color: #61dafb;
+}
+
+input[type="text"] {
+    width: 200px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #61dafb;
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.3);
+}
+
+/* Lista de arquivos */
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    background-color: #252526;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li a {
+    color: #61dafb;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+li a:hover {
+    background-color: #61dafb;
+    color: #1e1e1e;
+}
+
+/* Mensagens de erro */
+div[style*="color: red"] {
+    background-color: #442222;
+    color: #ff6b6b !important;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    border: 1px solid #ff6b6b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .editor textarea, .saida {
+        height: 300px;
+        min-height: auto;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
